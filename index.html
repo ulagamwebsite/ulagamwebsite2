@@ -200,14 +200,14 @@ body::after{ content:''; position:fixed; top:20%; right:-10%; width:600px; heigh
 function openGoogleForm() { 
   let now = new Date();
   let openDate = new Date("2026-07-06T12:00:00"); 
-  let closeDate = new Date("2026-07-07T16:00:00"); // 04:00 PM set pannியாச்சு macha
+  let closeDate = new Date("2026-07-08T16:00:00"); // Updated closing date to 08.07.2026 04:00 PM
 
   if (now < openDate) {
     showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>06.07.2026 AT 12.00 PM</span>", false);
   } else if (now >= openDate && now < closeDate) {
     window.open("https://forms.gle/mnVmyTMk3Ra6vKoJ7", "_blank"); 
   } else {
-    showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 07.07.2026 AT 04:00 PM</span>", true);
+    showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 08.07.2026 AT 04:00 PM</span>", true);
   }
 }
 
