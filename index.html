@@ -196,18 +196,18 @@ body::after{ content:''; position:fixed; top:20%; right:-10%; width:600px; heigh
 </div>
 
 <script>
-// FIRST BUTTON LOGIC (TIMED: OPEN 06.07.2026 12:00 PM | CLOSE 08.07.2026 04:00 PM)
+// FIRST BUTTON LOGIC (TIMED: OPEN 09.07.2026 08:00 PM | CLOSE 12.07.2026 04:00 PM)
 function openGoogleForm() { 
   let now = new Date();
-  let openDate = new Date("2026-07-06T12:00:00"); 
-  let closeDate = new Date("2026-07-08T16:00:00"); 
+  let openDate = new Date("2026-07-09T20:00:00"); 
+  let closeDate = new Date("2026-07-12T16:00:00"); 
 
   if (now < openDate) {
-    showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>06.07.2026 AT 12.00 PM</span>", false);
+    showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>09.07.2026 AT 08:00 PM</span>", false);
   } else if (now >= openDate && now < closeDate) {
-    window.open("https://forms.gle/241n3crZwYx64zGU7", "_blank"); 
+    window.open("https://forms.gle/LiwTihrWWtg3BH4bA", "_blank"); 
   } else {
-    showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 08.07.2026 AT 04:00 PM</span>", true);
+    showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 12.07.2026 AT 04:00 PM</span>", true);
   }
 }
 
