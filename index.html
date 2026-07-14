@@ -180,7 +180,7 @@ body::after{ content:''; position:fixed; top:20%; right:-10%; width:600px; heigh
     
     <div class="poster-card">
       <div class="image-container">
-        <img src="https://i.postimg.cc/cHjBSR8R/Compress-JPEG-Online-img(1080x1350).jpg" class="poster-image">
+        <img src="https://i.postimg.cc/KYtDCrrf/signal-2026-07-14-17-35-49-531.jpg" class="poster-image">
       </div>
       <button class="poster-btn" onclick="openNewRegistration()">REGISTER</button>
     </div>
@@ -211,18 +211,18 @@ function openGoogleForm() {
   }
 }
 
-// SECOND BUTTON LOGIC (TIMED: OPEN 07.07.2026 07:00 PM | CLOSE 08.07.2026 07:00 PM)
+// SECOND BUTTON LOGIC (TIMED: OPEN 14.07.2026 07:00 PM | CLOSE 15.07.2026 07:00 PM)
 function openNewRegistration() { 
   let now = new Date();
-  let openDate = new Date("2026-07-07T19:00:00"); // 07.07.2026 at 07:00 PM
-  let closeDate = new Date("2026-07-08T19:00:00"); // 08.07.2026 at 07:00 PM
+  let openDate = new Date("2026-07-14T19:00:00"); // 14.07.2026 at 07:00 PM
+  let closeDate = new Date("2026-07-15T19:00:00"); // 15.07.2026 at 07:00 PM
 
   if(now < openDate){ 
-    showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>07.07.2026 AT 07.00 PM</span>", false); 
+    showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>14.07.2026 AT 07:00 PM</span>", false); 
   } else if (now >= openDate && now < closeDate) { 
-    window.open("https://forms.gle/J96zU1C3zDXf6D6d6", "_blank"); 
+    window.open("https://forms.gle/b9cbvpb3U6SRYvVv6", "_blank"); 
   } else {
-    showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 08.07.2026 AT 07:00 PM</span>", true);
+    showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 15.07.2026 AT 07:00 PM</span>", true);
   }
 }
 
