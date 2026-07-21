@@ -19,7 +19,7 @@ body::before{
   height:100%; 
   background: url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1920&auto=format&fit=crop') no-repeat center center;
   background-size: cover;
-  opacity: 0.08; /* Subtle-ah blockchain nodes theriyura mari setup */
+  opacity: 0.08; /* Subtle blockchain nodes setup */
   z-index:-2; 
 }
 body::after{ content:''; position:fixed; top:20%; right:-10%; width:600px; height:600px; background: radial-gradient(circle, rgba(255,215,0,0.04) 0%, transparent 65%); z-index:-1; }
@@ -52,7 +52,7 @@ body::after{ content:''; position:fixed; top:20%; right:-10%; width:600px; heigh
 
 /* POSTER CARD WITH BACKGROUND WING PSEUDO ELEMENTS */
 .poster-card { 
-  background: rgba(14, 17, 34, 0.95); /* Layer visibility glass effect slightly opacity fixed */
+  background: rgba(14, 17, 34, 0.95);
   border:2px solid #1a1f38; 
   padding:22px; 
   position:relative; 
@@ -173,7 +173,7 @@ body::after{ content:''; position:fixed; top:20%; right:-10%; width:600px; heigh
   <section class="poster-grid">
     <div class="poster-card">
       <div class="image-container">
-        <img src="https://i.postimg.cc/wj2MpGNR/signal-2026-07-17-14-20-16-495.jpg" class="poster-image">
+        <img src="https://i.postimg.cc/VNX5rc4c/Chat-GPT-Image-Jul-20-2026-01-14-00-PM.png" class="poster-image">
       </div>
       <button class="poster-btn" onclick="openGoogleForm()">REGISTER</button>
     </div>
@@ -196,18 +196,18 @@ body::after{ content:''; position:fixed; top:20%; right:-10%; width:600px; heigh
 </div>
 
 <script>
-// FIRST BUTTON LOGIC (TIMED: OPEN 17.07.2026 01:59 PM | CLOSE 19.07.2026 04:00 PM)
+// FIRST BUTTON LOGIC (TIMED: OPEN 21.07.2026 07:00 PM | CLOSE 22.07.2026 07:00 PM)
 function openGoogleForm() { 
   let now = new Date();
-  let openDate = new Date("2026-07-17T13:59:00"); 
-  let closeDate = new Date("2026-07-19T16:00:00"); 
+  let openDate = new Date("2026-07-21T19:00:00"); 
+  let closeDate = new Date("2026-07-22T19:00:00"); 
 
   if (now < openDate) {
-    showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>17.07.2026 AT 01:59 PM</span>", false);
+    showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>21.07.2026 AT 07:00 PM</span>", false);
   } else if (now >= openDate && now < closeDate) {
-    window.open("https://forms.gle/HEHaaGcqgfH1TTCm6", "_blank"); 
+    window.open("https://forms.gle/MJ5tGyeGCARZ6Mgc9", "_blank"); 
   } else {
-    showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 19.07.2026 AT 04:00 PM</span>", true);
+    showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 22.07.2026 AT 07:00 PM</span>", true);
   }
 }
 
