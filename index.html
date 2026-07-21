@@ -1,257 +1,513 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BLOCKCHAIN TECHNOLOGY </title>
+
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght=500;700&family=Oxanium:wght=600;800&display=swap" rel="stylesheet">
+
 <style>
+
 *{ margin:0; padding:0; box-sizing:border-box; }
+
 body{ background:#06070d; color:#e2eafc; font-family:'Oxanium',sans-serif; overflow-x:hidden; min-height:100vh; }
 
+
+
 /* CYBER BLOCKCHAIN NETWORK BACKGROUND IMAGE */
+
 body::before{ 
+
   content:''; 
+
   position:fixed; 
+
   top:0; 
+
   left:0; 
+
   width:100%; 
+
   height:100%; 
+
   background: url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1920&auto=format&fit=crop') no-repeat center center;
+
   background-size: cover;
+
   opacity: 0.08; /* Subtle blockchain nodes setup */
+
   z-index:-2; 
+
 }
+
 body::after{ content:''; position:fixed; top:20%; right:-10%; width:600px; height:600px; background: radial-gradient(circle, rgba(255,215,0,0.04) 0%, transparent 65%); z-index:-1; }
 
+
+
 /* HERO */
+
 .hero{ max-width:1400px; margin:auto; padding:80px 20px 40px; display:flex; justify-content: flex-start; align-items: center; }
 
+
+
 /* SMOOTH UP AND DOWN HEADING STYLE */
+
 .floating-heading {
+
   font-size: clamp(24px, 4vw, 36px);
+
   font-weight: 800;
+
   color: #ffd700;
+
   letter-spacing: 3px;
+
   text-transform: uppercase;
+
   text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+
   position: relative;
+
   padding-left: 0;
+
   animation: smoothUpDown 4s ease-in-out infinite;
+
 }
+
+
 
 /* Up & Down Motion Animation */
+
 @keyframes smoothUpDown {
+
   0% { transform: translateY(0px); }
+
   50% { transform: translateY(-20px); text-shadow: 0 10px 30px rgba(255, 215, 0, 0.6); }
+
   100% { transform: translateY(0px); }
+
 }
+
+
 
 /* POSTER GRID */
+
 .poster-grid{ max-width:1400px; margin:auto; padding:20px 18px 100px; display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,340px)); gap:32px; justify-content:center; }
 
+
+
 /* POSTER CARD WITH BACKGROUND WING PSEUDO ELEMENTS */
+
 .poster-card { 
+
   background: rgba(14, 17, 34, 0.95);
+
   border:2px solid #1a1f38; 
+
   padding:22px; 
+
   position:relative; 
+
   display:flex; 
+
   flex-direction:column; 
+
   justify-content:space-between; 
+
   border-radius: 40px; 
+
   transition:0.4s ease; 
+
   width:100%; 
+
   max-width:340px; 
+
   margin:auto; 
+
 }
+
+
 
 /* --- BACKGROUND BUTTERFLY WINGS ENGINE --- */
 
+
+
 /* CARD 1 - LEFT BACKGROUND WING */
+
 .poster-grid .poster-card:nth-child(1)::before {
+
   content: '';
+
   position: absolute;
+
   top: 5%;
+
   left: -65px;
+
   width: 90px;
+
   height: 85%;
+
   background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, transparent 80%);
+
   border-left: 2px dashed rgba(255, 215, 0, 0.4);
+
   border-radius: 150px 0 0 180px;
+
   transform-origin: right center;
+
   transform: scaleX(1) rotate(-5deg);
+
   z-index: -1;
+
   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+
   filter: blur(1px);
+
 }
+
+
 
 /* CARD 2 - RIGHT BACKGROUND WING */
+
 .poster-grid .poster-card:nth-child(2)::after {
+
   content: '';
+
   position: absolute;
+
   top: 5%;
+
   right: -65px;
+
   width: 90px;
+
   height: 85%;
+
   background: linear-gradient(-135deg, rgba(255, 215, 0, 0.15) 0%, transparent 80%);
+
   border-right: 2px dashed rgba(255, 215, 0, 0.4);
+
   border-radius: 0 150px 180px 0;
+
   transform-origin: left center;
+
   transform: scaleX(1) rotate(5deg);
+
   z-index: -1;
+
   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+
   filter: blur(1px);
+
 }
+
+
 
 /* HOVER FLAPPING ANIMATION STATE */
+
 .poster-card:hover { 
+
   transform: translateY(-5px) scale(1.01); 
+
   border-color:#ffd700; 
+
   box-shadow: 0 15px 35px rgba(255,215,0,0.25); 
+
 }
+
+
 
 /* Left wing expansion on hover */
+
 .poster-grid .poster-card:nth-child(1):hover::before {
+
   left: -95px;
+
   width: 120px;
+
   background: linear-gradient(135deg, rgba(255, 215, 0, 0.25) 0%, transparent 90%);
+
   transform: scaleX(1.1) rotate(-12deg);
+
   filter: drop-shadow(0 0 10px rgba(255,215,0,0.3));
+
 }
+
+
 
 /* Right wing expansion on hover */
+
 .poster-grid .poster-card:nth-child(2):hover::after {
+
   right: -95px;
+
   width: 120px;
+
   background: linear-gradient(-135deg, rgba(255, 215, 0, 0.25) 0%, transparent 90%);
+
   transform: scaleX(1.1) rotate(12deg);
+
   filter: drop-shadow(0 0 10px rgba(255,215,0,0.3));
+
 }
+
+
 
 /* IMAGE CONTAINER */
+
 .image-container { 
+
   width:100%; 
+
   height:450px; 
+
   overflow:hidden; 
+
   border:1px solid rgba(255,255,255,0.05); 
+
   background:#06070d; 
+
   border-radius:30px; 
+
   position:relative; 
+
 }
+
 .poster-image{ width:100%; height:100%; object-fit:contain; object-position:center; display:block; transition:0.4s; }
+
 .poster-card:hover .poster-image{ transform:scale(1.04); }
 
+
+
 /* POSTER BUTTON */
+
 .poster-btn{ font-family:'Oxanium',sans-serif; width:100%; padding:14px; margin-top:18px; border:none; background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%); color:#06070d; font-size:14px; font-weight:800; letter-spacing:2px; cursor:pointer; border-radius: 50px; transition:0.3s; box-shadow: 0 0 15px rgba(255,215,0,0.25); }
+
 .poster-btn:hover{ background: linear-gradient(135deg, #ffffff 0%, #ffd700 100%); transform: translateY(-3px) scale(1.02); box-shadow: 0 0 25px rgba(255,255,255,0.5); }
 
+
+
 /* REGISTRATION POPUP */
+
 .registration-popup{ position:fixed; top:0; left:0; width:100%; height:100%; display:none; justify-content:center; align-items:center; background: rgba(3, 4, 8, 0.96); z-index:9999; padding:20px; backdrop-filter: blur(5px); }
+
 .registration-box{ width:420px; padding:45px 35px; background: #0b0f24; border: 2px solid #ffd700; text-align:center; box-shadow: 0 0 40px rgba(255,215,0,0.25); clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px)); transition: border-color 0.3s; }
+
 .registration-box h2{ font-size:24px; font-weight:800; margin-bottom:20px; color:#ffd700; letter-spacing:3px; text-transform: uppercase; }
+
 .registration-box p { font-size: 16px; line-height: 1.6; color: #e2eafc; margin-bottom: 30px; font-family: 'Fira Code', monospace; }
 
+
+
 /* Closed alert look */
+
 .registration-box.closed-box { border-color: #ff4a4a; box-shadow: 0 0 40px rgba(255, 74, 74, 0.25); }
+
 .registration-box.closed-box h2 { color: #ff4a4a; }
 
+
+
 /* POPUP WINDOW BUTTON */
+
 .registration-box button{ font-family:'Oxanium',sans-serif; width:100%; padding:14px; border:2px solid #ffd700; background:transparent; color:#ffd700; font-size:14px; font-weight:800; letter-spacing: 2px; cursor:pointer; border-radius: 50px; transition:0.3s; }
+
 .registration-box button:hover{ background:#ffd700; color:#06070d; box-shadow: 0 0 20px rgba(255,215,0,0.5); }
+
 .registration-box.closed-box button { border-color: #ff4a4a; color: #ff4a4a; }
+
 .registration-box.closed-box button:hover { background: #ff4a4a; color: #06070d; box-shadow: 0 0 20px rgba(255, 74, 74, 0.5); }
+
 </style>
+
 </head>
+
 <body>
 
+
+
 <div id="mainPage">
+
   <section class="hero">
+
     <h1 class="floating-heading">Blockchain Technology</h1>
+
   </section>
+
+
 
   <section class="poster-grid">
+
     <div class="poster-card">
+
       <div class="image-container">
+
         <img src="https://i.postimg.cc/VNX5rc4c/Chat-GPT-Image-Jul-20-2026-01-14-00-PM.png" class="poster-image">
+
       </div>
+
       <button class="poster-btn" onclick="openGoogleForm()">REGISTER</button>
+
     </div>
+
     
+
     <div class="poster-card">
+
       <div class="image-container">
+
         <img src="https://i.postimg.cc/wMKKVVJw/signal-2026-07-04-11-05-19-091.jpg" class="poster-image">
+
       </div>
+
       <button class="poster-btn" onclick="openNewRegistration()">REGISTER</button>
+
     </div>
+
   </section>
+
 </div>
+
+
 
 <div id="registrationPopup" class="registration-popup">
+
   <div id="popupBox" class="registration-box">
+
     <h2 id="popupTitle">REGISTRATION STATUS</h2>
+
     <p id="popupMessage">MESSAGE</p>
+
     <button onclick="closeRegistrationPopup()">CLOSE WINDOW</button>
+
   </div>
+
 </div>
 
+
+
 <script>
+
 // FIRST BUTTON LOGIC (TIMED: OPEN 21.07.2026 07:00 PM | CLOSE 22.07.2026 07:00 PM)
+
 function openGoogleForm() { 
+
   let now = new Date();
+
   let openDate = new Date("2026-07-21T19:00:00"); 
+
   let closeDate = new Date("2026-07-22T19:00:00"); 
 
+
+
   if (now < openDate) {
+
     showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>21.07.2026 AT 07:00 PM</span>", false);
+
   } else if (now >= openDate && now < closeDate) {
+
     window.open("https://forms.gle/MJ5tGyeGCARZ6Mgc9", "_blank"); 
+
   } else {
+
     showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 22.07.2026 AT 07:00 PM</span>", true);
+
   }
+
 }
+
+
 
 // SECOND BUTTON LOGIC (TIMED: OPEN 03.07.2026 11:00 AM | CLOSE 05.07.2026 04:00 PM)
+
 function openNewRegistration() { 
+
   let now = new Date();
+
   let openDate = new Date("2026-07-03T11:00:00"); 
+
   let closeDate = new Date("2026-07-05T16:00:00"); 
 
+
+
   if(now < openDate){ 
+
     showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>03.07.2026 AT 11.00 AM</span>", false); 
+
   } else if (now >= openDate && now < closeDate) { 
+
     window.open("https://forms.gle/J96zU1C3zDXf6D6d6", "_blank"); 
+
   } else {
+
     showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 05.07.2026</span>", true);
+
   }
+
 }
+
+
 
 // ADVANCED POPUP CONTROLLER
+
 function showRegistrationPopup(title, message, isClosed){ 
+
   let popup = document.getElementById("registrationPopup");
+
   let box = document.getElementById("popupBox");
+
   
+
   document.getElementById("popupTitle").innerText = title;
+
   document.getElementById("popupMessage").innerHTML = message; 
+
   
+
   if(isClosed) {
+
     box.classList.add("closed-box");
+
   } else {
+
     box.classList.remove("closed-box");
+
   }
+
   
+
   popup.style.display = "flex"; 
+
 }
+
+
 
 function closeRegistrationPopup(){ 
+
   document.getElementById("registrationPopup").style.display = "none"; 
+
 }
 
+
+
 window.onclick = function(event){
+
   if(event.target == document.getElementById("registrationPopup")){ 
+
     document.getElementById("registrationPopup").style.display = "none"; 
+
   }
+
 }
+
 </script>
+
 </body>
+
 </html>
