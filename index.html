@@ -3,164 +3,284 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BLOCKCHAIN TECHNOLOGY </title>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght=500;700&family=Oxanium:wght=600;800&display=swap" rel="stylesheet">
+<title>BLOCKCHAIN TECHNOLOGY</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-*{ margin:0; padding:0; box-sizing:border-box; }
-body{ background:#06070d; color:#e2eafc; font-family:'Oxanium',sans-serif; overflow-x:hidden; min-height:100vh; }
-
-/* CYBER BLOCKCHAIN NETWORK BACKGROUND IMAGE */
-body::before{ 
-  content:''; 
-  position:fixed; 
-  top:0; 
-  left:0; 
-  width:100%; 
-  height:100%; 
-  background: url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1920&auto=format&fit=crop') no-repeat center center;
-  background-size: cover;
-  opacity: 0.08; /* Subtle blockchain nodes setup */
-  z-index:-2; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body::after{ content:''; position:fixed; top:20%; right:-10%; width:600px; height:600px; background: radial-gradient(circle, rgba(255,215,0,0.04) 0%, transparent 65%); z-index:-1; }
 
-/* HERO */
-.hero{ max-width:1400px; margin:auto; padding:80px 20px 40px; display:flex; justify-content: flex-start; align-items: center; }
+body {
+  background: #030712;
+  color: #f3f4f6;
+  font-family: 'Rajdhani', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
 
-/* SMOOTH UP AND DOWN HEADING STYLE */
+/* CYBER GRID & DIGITAL ASSETS BACKGROUND SYSTEM */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 25%, rgba(59, 130, 246, 0.18) 0%, transparent 50%),
+    radial-gradient(circle at 80% 75%, rgba(168, 85, 247, 0.18) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2038bdf8' fill-opacity='0.04'%3E%3Cpath d='M50 50h-8v8h8v-8zm0-40h-8v8h8v-8zm-30 0h-8v8h8v-8zm0 40h-8v8h8v-8zm15-20h-8v8h8v-8zm0 20h-8v8h8v-8zm0-40h-8v8h8v-8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 80px 80px, 35px 35px, 35px 35px;
+  z-index: -1;
+}
+
+/* HERO SECTION */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 20px 30px;
+  text-align: center;
+}
+
 .floating-heading {
-  font-size: clamp(24px, 4vw, 36px);
-  font-weight: 800;
-  color: #ffd700;
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 900;
+  background: linear-gradient(135deg, #60a5fa 0%, #c084fc 50%, #f472b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  animation: glowPulse 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% { filter: drop-shadow(0 0 12px rgba(96, 165, 250, 0.35)); transform: translateY(0); }
+  100% { filter: drop-shadow(0 0 28px rgba(192, 132, 252, 0.65)); transform: translateY(-8px); }
+}
+
+.sub-heading {
+  font-size: 16px;
+  color: #9ca3af;
+  margin-top: 12px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-  position: relative;
-  padding-left: 0;
-  animation: smoothUpDown 4s ease-in-out infinite;
-}
-
-/* Up & Down Motion Animation */
-@keyframes smoothUpDown {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); text-shadow: 0 10px 30px rgba(255, 215, 0, 0.6); }
-  100% { transform: translateY(0px); }
+  font-weight: 600;
 }
 
 /* POSTER GRID */
-.poster-grid{ max-width:1400px; margin:auto; padding:20px 18px 100px; display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,340px)); gap:32px; justify-content:center; }
-
-/* POSTER CARD WITH BACKGROUND WING PSEUDO ELEMENTS */
-.poster-card { 
-  background: rgba(14, 17, 34, 0.95);
-  border:2px solid #1a1f38; 
-  padding:22px; 
-  position:relative; 
-  display:flex; 
-  flex-direction:column; 
-  justify-content:space-between; 
-  border-radius: 40px; 
-  transition:0.4s ease; 
-  width:100%; 
-  max-width:340px; 
-  margin:auto; 
+.poster-grid {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 380px));
+  gap: 60px;
+  justify-content: center;
 }
 
-/* --- BACKGROUND BUTTERFLY WINGS ENGINE --- */
+/* POSTER CARD SYSTEM WITH WINGS */
+.poster-card {
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
 
-/* CARD 1 - LEFT BACKGROUND WING */
-.poster-grid .poster-card:nth-child(1)::before {
+/* LEFT WING */
+.poster-card::before {
   content: '';
   position: absolute;
-  top: 5%;
-  left: -65px;
-  width: 90px;
-  height: 85%;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, transparent 80%);
-  border-left: 2px dashed rgba(255, 215, 0, 0.4);
-  border-radius: 150px 0 0 180px;
+  top: 10%;
+  left: -48px;
+  width: 65px;
+  height: 80%;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.35) 0%, rgba(168, 85, 247, 0.05) 85%);
+  border-left: 2px dashed rgba(96, 165, 250, 0.6);
+  border-radius: 120px 0 0 140px;
   transform-origin: right center;
-  transform: scaleX(1) rotate(-5deg);
+  transform: rotate(-8deg);
   z-index: -1;
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-  filter: blur(1px);
+  transition: all 0.5s ease;
+  filter: drop-shadow(-5px 0 10px rgba(96, 165, 250, 0.3));
 }
 
-/* CARD 2 - RIGHT BACKGROUND WING */
-.poster-grid .poster-card:nth-child(2)::after {
+/* RIGHT WING */
+.poster-card::after {
   content: '';
   position: absolute;
-  top: 5%;
-  right: -65px;
-  width: 90px;
-  height: 85%;
-  background: linear-gradient(-135deg, rgba(255, 215, 0, 0.15) 0%, transparent 80%);
-  border-right: 2px dashed rgba(255, 215, 0, 0.4);
-  border-radius: 0 150px 180px 0;
+  top: 10%;
+  right: -48px;
+  width: 65px;
+  height: 80%;
+  background: linear-gradient(-135deg, rgba(168, 85, 247, 0.35) 0%, rgba(244, 114, 182, 0.05) 85%);
+  border-right: 2px dashed rgba(168, 85, 247, 0.6);
+  border-radius: 0 120px 140px 0;
   transform-origin: left center;
-  transform: scaleX(1) rotate(5deg);
+  transform: rotate(8deg);
   z-index: -1;
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-  filter: blur(1px);
+  transition: all 0.5s ease;
+  filter: drop-shadow(5px 0 10px rgba(168, 85, 247, 0.3));
 }
 
-/* HOVER FLAPPING ANIMATION STATE */
-.poster-card:hover { 
-  transform: translateY(-5px) scale(1.01); 
-  border-color:#ffd700; 
-  box-shadow: 0 15px 35px rgba(255,215,0,0.25); 
+/* HOVER FLAPPING EFFECT */
+.poster-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  border-color: rgba(96, 165, 250, 0.6);
+  box-shadow: 0 30px 60px rgba(59, 130, 246, 0.3);
 }
 
-/* Left wing expansion on hover */
-.poster-grid .poster-card:nth-child(1):hover::before {
-  left: -95px;
-  width: 120px;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.25) 0%, transparent 90%);
-  transform: scaleX(1.1) rotate(-12deg);
-  filter: drop-shadow(0 0 10px rgba(255,215,0,0.3));
+.poster-card:hover::before {
+  left: -70px;
+  width: 90px;
+  transform: rotate(-14deg);
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.5) 0%, rgba(168, 85, 247, 0.1) 90%);
+  filter: drop-shadow(-8px 0 18px rgba(96, 165, 250, 0.6));
 }
 
-/* Right wing expansion on hover */
-.poster-grid .poster-card:nth-child(2):hover::after {
-  right: -95px;
-  width: 120px;
-  background: linear-gradient(-135deg, rgba(255, 215, 0, 0.25) 0%, transparent 90%);
-  transform: scaleX(1.1) rotate(12deg);
-  filter: drop-shadow(0 0 10px rgba(255,215,0,0.3));
+.poster-card:hover::after {
+  right: -70px;
+  width: 90px;
+  transform: rotate(14deg);
+  background: linear-gradient(-135deg, rgba(168, 85, 247, 0.5) 0%, rgba(244, 114, 182, 0.1) 90%);
+  filter: drop-shadow(8px 0 18px rgba(168, 85, 247, 0.6));
 }
 
-/* IMAGE CONTAINER */
-.image-container { 
-  width:100%; 
-  height:450px; 
-  overflow:hidden; 
-  border:1px solid rgba(255,255,255,0.05); 
-  background:#06070d; 
-  border-radius:30px; 
-  position:relative; 
+/* IMAGE FRAME */
+.image-container {
+  width: 100%;
+  height: 430px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
-.poster-image{ width:100%; height:100%; object-fit:contain; object-position:center; display:block; transition:0.4s; }
-.poster-card:hover .poster-image{ transform:scale(1.04); }
 
-/* POSTER BUTTON */
-.poster-btn{ font-family:'Oxanium',sans-serif; width:100%; padding:14px; margin-top:18px; border:none; background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%); color:#06070d; font-size:14px; font-weight:800; letter-spacing:2px; cursor:pointer; border-radius: 50px; transition:0.3s; box-shadow: 0 0 15px rgba(255,215,0,0.25); }
-.poster-btn:hover{ background: linear-gradient(135deg, #ffffff 0%, #ffd700 100%); transform: translateY(-3px) scale(1.02); box-shadow: 0 0 25px rgba(255,255,255,0.5); }
+.poster-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
 
-/* REGISTRATION POPUP */
-.registration-popup{ position:fixed; top:0; left:0; width:100%; height:100%; display:none; justify-content:center; align-items:center; background: rgba(3, 4, 8, 0.96); z-index:9999; padding:20px; backdrop-filter: blur(5px); }
-.registration-box{ width:420px; padding:45px 35px; background: #0b0f24; border: 2px solid #ffd700; text-align:center; box-shadow: 0 0 40px rgba(255,215,0,0.25); clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px)); transition: border-color 0.3s; }
-.registration-box h2{ font-size:24px; font-weight:800; margin-bottom:20px; color:#ffd700; letter-spacing:3px; text-transform: uppercase; }
-.registration-box p { font-size: 16px; line-height: 1.6; color: #e2eafc; margin-bottom: 30px; font-family: 'Fira Code', monospace; }
+.poster-card:hover .poster-image {
+  transform: scale(1.05);
+}
 
-/* Closed alert look */
-.registration-box.closed-box { border-color: #ff4a4a; box-shadow: 0 0 40px rgba(255, 74, 74, 0.25); }
-.registration-box.closed-box h2 { color: #ff4a4a; }
+/* ACTION BUTTON */
+.poster-btn {
+  font-family: 'Orbitron', sans-serif;
+  width: 100%;
+  padding: 16px;
+  margin-top: 22px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+}
 
-/* POPUP WINDOW BUTTON */
-.registration-box button{ font-family:'Oxanium',sans-serif; width:100%; padding:14px; border:2px solid #ffd700; background:transparent; color:#ffd700; font-size:14px; font-weight:800; letter-spacing: 2px; cursor:pointer; border-radius: 50px; transition:0.3s; }
-.registration-box button:hover{ background:#ffd700; color:#06070d; box-shadow: 0 0 20px rgba(255,215,0,0.5); }
-.registration-box.closed-box button { border-color: #ff4a4a; color: #ff4a4a; }
-.registration-box.closed-box button:hover { background: #ff4a4a; color: #06070d; box-shadow: 0 0 20px rgba(255, 74, 74, 0.5); }
+.poster-btn:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+}
+
+/* MODAL POPUP */
+.registration-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(3, 7, 18, 0.88);
+  backdrop-filter: blur(12px);
+  z-index: 9999;
+  padding: 20px;
+}
+
+.registration-box {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px 32px;
+  background: #0f172a;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+  animation: modalSlide 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlide {
+  from { opacity: 0; transform: scale(0.9) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.registration-box h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #60a5fa;
+  letter-spacing: 1.5px;
+}
+
+.registration-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 28px;
+}
+
+.registration-box.closed-box {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.registration-box.closed-box h2 {
+  color: #f87171;
+}
+
+.registration-box button {
+  font-family: 'Orbitron', sans-serif;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.registration-box button:hover {
+  background: #ffffff;
+  color: #0f172a;
+}
 </style>
 </head>
 <body>
@@ -168,25 +288,29 @@ body::after{ content:''; position:fixed; top:20%; right:-10%; width:600px; heigh
 <div id="mainPage">
   <section class="hero">
     <h1 class="floating-heading">Blockchain Technology</h1>
+    <p class="sub-heading">Official Event Registration Portal</p>
   </section>
 
   <section class="poster-grid">
+    <!-- EVENT CARD 1 -->
     <div class="poster-card">
       <div class="image-container">
-        <img src="https://i.postimg.cc/VNX5rc4c/Chat-GPT-Image-Jul-20-2026-01-14-00-PM.png" class="poster-image">
+        <img src="https://i.postimg.cc/VNX5rc4c/Chat-GPT-Image-Jul-20-2026-01-14-00-PM.png" alt="Blockchain Event 1" class="poster-image">
       </div>
-      <button class="poster-btn" onclick="openGoogleForm()">REGISTER</button>
+      <button class="poster-btn" onclick="openGoogleForm()">REGISTER NOW</button>
     </div>
-    
+
+    <!-- EVENT CARD 2 -->
     <div class="poster-card">
       <div class="image-container">
-        <img src="https://i.postimg.cc/wMKKVVJw/signal-2026-07-04-11-05-19-091.jpg" class="poster-image">
+        <img src="https://i.postimg.cc/wMKKVVJw/signal-2026-07-04-11-05-19-091.jpg" alt="Blockchain Event 2" class="poster-image">
       </div>
-      <button class="poster-btn" onclick="openNewRegistration()">REGISTER</button>
+      <button class="poster-btn" onclick="openNewRegistration()">REGISTER NOW</button>
     </div>
   </section>
 </div>
 
+<!-- MODAL POPUP -->
 <div id="registrationPopup" class="registration-popup">
   <div id="popupBox" class="registration-box">
     <h2 id="popupTitle">REGISTRATION STATUS</h2>
@@ -203,11 +327,11 @@ function openGoogleForm() {
   let closeDate = new Date("2026-07-22T19:00:00"); 
 
   if (now < openDate) {
-    showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>21.07.2026 AT 07:00 PM</span>", false);
+    showRegistrationPopup("REGISTRATION STATUS", "Registration opens on <br><br><strong style='color:#60a5fa; font-size:18px;'>July 21, 2026 at 07:00 PM</strong>", false);
   } else if (now >= openDate && now < closeDate) {
     window.open("https://forms.gle/MJ5tGyeGCARZ6Mgc9", "_blank"); 
   } else {
-    showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 22.07.2026 AT 07:00 PM</span>", true);
+    showRegistrationPopup("REGISTRATION CLOSED", "Sorry! The form is officially closed.<br><br><span style='color:#f87171;'>Deadline expired on July 22, 2026 at 07:00 PM</span>", true);
   }
 }
 
@@ -217,17 +341,17 @@ function openNewRegistration() {
   let openDate = new Date("2026-07-03T11:00:00"); 
   let closeDate = new Date("2026-07-05T16:00:00"); 
 
-  if(now < openDate){ 
-    showRegistrationPopup("REGISTRATION STATUS", "REGISTRATION OPENS ON <br><br><span style='color:#ffd700; font-size:18px;'>03.07.2026 AT 11.00 AM</span>", false); 
+  if (now < openDate) { 
+    showRegistrationPopup("REGISTRATION STATUS", "Registration opens on <br><br><strong style='color:#60a5fa; font-size:18px;'>July 03, 2026 at 11:00 AM</strong>", false); 
   } else if (now >= openDate && now < closeDate) { 
     window.open("https://forms.gle/J96zU1C3zDXf6D6d6", "_blank"); 
   } else {
-    showRegistrationPopup("REGISTRATION CLOSED", "SORRY! THE FORM IS OFFICIALLY CLOSED.<br><br><span style='color:#ff4a4a;'>DEADLINE EXPIRED ON 05.07.2026</span>", true);
+    showRegistrationPopup("REGISTRATION CLOSED", "Sorry! The form is officially closed.<br><br><span style='color:#f87171;'>Deadline expired on July 05, 2026</span>", true);
   }
 }
 
 // ADVANCED POPUP CONTROLLER
-function showRegistrationPopup(title, message, isClosed){ 
+function showRegistrationPopup(title, message, isClosed) { 
   let popup = document.getElementById("registrationPopup");
   let box = document.getElementById("popupBox");
   
@@ -243,12 +367,12 @@ function showRegistrationPopup(title, message, isClosed){
   popup.style.display = "flex"; 
 }
 
-function closeRegistrationPopup(){ 
+function closeRegistrationPopup() { 
   document.getElementById("registrationPopup").style.display = "none"; 
 }
 
-window.onclick = function(event){
-  if(event.target == document.getElementById("registrationPopup")){ 
+window.onclick = function(event) {
+  if (event.target == document.getElementById("registrationPopup")) { 
     document.getElementById("registrationPopup").style.display = "none"; 
   }
 }
